@@ -1,0 +1,28 @@
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  #list{
+    background-color: purple;
+    color: whitesmoke;
+  }
+  .paratext{
+    background-color: lightcoral;
+  }
+  p{
+    font-weight: bold;
+  }
+  body{
+    font-size: 20px;
+  }
+  #item1{
+    background-color: yellow;
+    color: black;
+  }
+  #item2{
+   background-color: red;
+  }
+  #item3{
+   background-color: brown;
+  }
