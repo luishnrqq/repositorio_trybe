@@ -57,50 +57,74 @@
   </head>
   <body>
     <script>
-        let criaH1= document.createElement('h1');
+        const criaH1= document.createElement('h1');
         criaH1.innerText = 'Exercício 5.2 - JavaScript DOM';
         document.body.appendChild(criaH1);
 
-        let variavelMain = document.createElement('main');
+        const variavelMain = document.createElement('main');
         variavelMain.className('main-content');
         document.body.appendChild(variavelMain);
         
-        let criaSection = document.createElement('section');
+        const criaSection = document.createElement('section');
         criaSection.className('center-content');
         variavelMain.appendChild(criaSection);
 
-        let criarP  = document.createElement('p');
+        const criarP  = document.createElement('p');
         criaSection.appendChild(criarP);
 
-        let criarSectionLeft = document.createElement('section');
+        const criarSectionLeft = document.createElement('section');
         criaSectionLeft.className('left-content');
         variavelMain.appendChild(criarSectionLeft);
 
-        let sectionRight = document.createElement('section');
+        const sectionRight = document.createElement('section');
         sectionRight.className('right-content');
         variavelMain.appendChild(sectionRight);
 
-        let criaImg = document.createElement('img');
+        const criaImg = document.createElement('img');
         criaImg.className('small-image');
         criaImg.src = 'https://picsum.photos/200';
         criarSectionLeft.appendChild(criaImg);
 
-        let nordenadaList = document.createElement('ul');
+        const nordenadaList = document.createElement('ul');
         sectionRight.appendChild(nordenadaList);
-        let arrNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
+        const arrNumeros = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis',
         'Sete', 'Oito', 'Nove', 'Dez'];
         for(let numb in arrNumeros){
-          let itensUl = document.createElement('li');
+          const itensUl = document.createElement('li');
           itensUl.innerHTML = arrNumeros[numb];
           nordenadaList.appendChild(itensUl);
         }
 
-        let firtsH3  = document.createElement('h3');
-        let secondH3 = document.createElement('h3');
-        let thirdH3  = document.createElement('h3');
-        variavelMain.appendChild(firtsH3);
-        variavelMain.appendChild(secondH3);
-        variavelMain.appendChild(thirdH3);
+        for (let index = 1; index <= 3; index += 1) {
+        const elementH3 = document.createElement('h3');
+        variavelMain.appendChild(elementH3);
+      }
+     //sgunda parte
+     
+      const title = document.querySelector('h1');
+      title.className = 'title';
+
+      
+      const elementsH3 = document.getElementsByTagName('h3');
+      for (let index = 0; index < 3; index += 1) {
+        elementsH3[index].className = 'description';
+      }
+
+     
+      const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+      elementMain.removeChild(sectionLeftContent);
+
+      
+      const sectionRightContent = document.getElementsByClassName('right-content')[0];
+      sectionRightContent.style.marginRight='auto';
+
+      
+      const sectionCenterContent = document.getElementsByClassName('center-content')[0];
+      sectionCenterContent.parentNode.style.backgroundColor = 'green';
+
+     
+      ul.lastChild.remove();
+      ul.lastChild.remove();
     </script>
   </body>
 </html>
